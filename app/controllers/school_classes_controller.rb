@@ -20,14 +20,14 @@ class SchoolClassesController < ApplicationController
   def update
     set_schoolclass
     @school_class.update post_params(:title)
+    redirect_to school_class_path
   end
 
   def set_schoolclass
     @school_class = SchoolClass.find(params[:id])
   end
-    
+
 
 
 
 end
-
