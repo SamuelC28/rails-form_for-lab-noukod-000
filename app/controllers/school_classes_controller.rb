@@ -27,6 +27,10 @@ class SchoolClassesController < ApplicationController
     @school_class = SchoolClass.find(params[:id])
   end
 
+  def post_params(*args)
+    params.require(:school_class).permit(*args)
+  end
+
 
 
 
